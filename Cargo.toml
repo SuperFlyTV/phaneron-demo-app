@@ -1,0 +1,19 @@
+[package]
+name = "phaneron-demo-app"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+axum = { version = "0.6.9", features = ["macros", "ws"] }
+color-eyre = "0.6.2"
+futures-util = "0.3.26"
+reqwest = { version = "0.11.14", features = ["json"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1.25.0", features = ["full"] }
+tokio-stream = { version = "0.1.12", features = ["sync"] }
+tokio-tungstenite = "0.18.0"
+tracing = "0.1.37"
+tracing-subscriber = { version = "0.3.16", features = ["env-filter"] }
+url = "2.0.0"
+uuid = { version = "1.2.2", features = ["serde", "v4"] }
