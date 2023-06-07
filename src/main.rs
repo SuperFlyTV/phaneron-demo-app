@@ -259,7 +259,7 @@ async fn talk_to_phaneron(
     };
 
     let resp: crate::phaneron_ws_message::RegisterResponse = reqwest::Client::new()
-        .post("http://127.0.0.1:8080/register")
+        .post(format!("http://127.0.0.1:8080/ws/{user_id}/connection"))
         .header(USER_AGENT, "PhaneronTestApp/1.0.0")
         .header(ACCEPT, "*/*")
         .header(HOST, "localhost:8080")
